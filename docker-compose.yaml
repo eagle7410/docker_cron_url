@@ -1,0 +1,10 @@
+---
+version: "3.5"
+services:
+  cron:
+    build: .
+    container_name: "cron"
+    environment:
+      - CRON_LINK=*/1 * * * *
+      - CRON_URL=http://google.com
+      - WAIT_SECOND_START=30
